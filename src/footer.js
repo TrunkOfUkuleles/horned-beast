@@ -12,7 +12,7 @@ class Footer extends React.Component {
     }
     render (){
       let handleClick = () => {
-        this.setState({bgColor:blue})
+        this.setState({bgColor:'blue'})
       }
 
      return (
