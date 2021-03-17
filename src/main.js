@@ -1,6 +1,9 @@
 
 import React from 'react';
 import HornedBeast from './horned.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CardColumns from 'react-bootstrap/CardColumns'
+
 
 
 
@@ -46,9 +49,11 @@ class Main extends React.Component{
     return(
       
       <>
-     { data.map((el) => {
-    return <HornedBeast url={el.image_url} name={el.title} desc={el.description} alt={el.keyword} />
- })}
+      <CardColumns>
+     { data.map((el, index) => (
+    <div key={index}><HornedBeast url={el.image_url} name={el.title} desc={el.description} alt={el.keyword} /></div>
+     ))}
+ </CardColumns>
  </>
     )
     
