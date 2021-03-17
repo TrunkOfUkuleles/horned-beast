@@ -9,7 +9,7 @@ import Main from './main'
 class App extends React.Component {
   render() {
     return (
-    <div className="Appp">
+    <div className="App">
       <Header />
       <Main />
       <Footer />
