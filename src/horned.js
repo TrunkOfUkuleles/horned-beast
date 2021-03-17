@@ -8,7 +8,6 @@ class HornedBeast extends React.Component {
         super(props);
         this.state = {
           fav: 0,
-          nothing: 1,
         };
       }
     
