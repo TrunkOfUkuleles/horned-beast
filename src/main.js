@@ -17,13 +17,13 @@ class Main extends React.Component{
     };
   }
 
-  makeBig = (e) => {
+ 
+  render() {
+
+     makeBig = (e) => {
       this.props.modalShift(e)
       
     }
-  render() {
-
-    
 
 
     return(

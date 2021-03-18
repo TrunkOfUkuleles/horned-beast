@@ -16,20 +16,21 @@ constructor(props){
   }
 }
 
-modalSet = (e) => {
-  this.setState({modal: this.props.data[{e}].image_url})
-  this.setState({shower: !this.state.shower})
-}
 
-modalClose = () => {
-  this.setState({shower: !this.state.shower})
-}
+
 
 
 
   render() {
     var data = require('./assets/data.json');
-   
+   modalClose = () => {
+  this.setState({shower: !this.state.shower})
+  }
+  modalSet = (e) => {
+  this.setState({modal: this.props.data[{e}].image_url})
+  this.setState({shower: !this.state.shower})
+}
+
     return (
     <div className="App">
       <Header />

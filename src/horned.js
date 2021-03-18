@@ -11,9 +11,7 @@ class HornedBeast extends React.Component {
         };
       }
 
-      handleMode = (e) => {
-        this.props.clicker(e)
-      }
+      
     
 
 render() {
@@ -23,7 +21,9 @@ render() {
           this.setState({fav: this.state.fav + 1})
       }
   
-        
+        handleMode = (e) => {
+        this.props.clicker(e)
+      }
 
     return (
       <div>
