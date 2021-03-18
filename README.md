@@ -34,6 +34,7 @@ lab: class 03
 
 feature #4 modal
 estimate: 1 hour
-
+start: 10:00
+end:
 
 
