@@ -1,5 +1,5 @@
 ---
-permalink: './public/index.html'
+permalink: ./public/index.html
 ---
 ##Horned Animals Page
 This is a site that is being built out to display a serioes of animals with horns - automatically displaying images, info, etc. Next step is to reference and import images from offsite
