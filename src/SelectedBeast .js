@@ -10,7 +10,7 @@ class SelectedBeast extends React.Component {
     constructor(props){
         super(props)
         this.state={
-            
+
         }
     }
 
@@ -19,9 +19,9 @@ class SelectedBeast extends React.Component {
         return(
             <>
 
-        <Modal show={this.props.show} onHide={this.props.modalClose()}>
+        <Modal show={this.props.show} onHide={this.props.modalClose}>
             <ModalBody>
-                <img src={this.props.picture} alt='modal' width='10rem' onClick={props.onHide}></img>
+                <img src={this.props.picture} alt='modal' width='10rem' onClick={this.props.onHide}></img>
             </ModalBody>
         </Modal>
 

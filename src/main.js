@@ -15,15 +15,16 @@ class Main extends React.Component{
     this.state = {
      
     };
+    this.modalShift = this.props.modalShift;
   }
 
  
   render() {
 
-     makeBig = (e) => {
-      this.props.modalShift(e)
+//      const makeBig = () => {
+//       this.modalShift()
       
-    }
+//  }
 
 
     return(
@@ -31,7 +32,7 @@ class Main extends React.Component{
       <>
       <CardColumns>
      { this.props.cardData.map((el, index) => (
-    <div key={index}><HornedBeast url={el.image_url} name={el.title} desc={el.description} alt={el.keyword} clicker={makeBig} /></div>
+    <div key={index}><HornedBeast key={index} url={el.image_url} name={el.title} desc={el.description} alt={el.keyword} clicker={this.modalShift} /></div>
      ))}
  </CardColumns>
  </>
