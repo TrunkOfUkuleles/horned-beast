@@ -12,6 +12,7 @@ class App extends React.Component {
 constructor(props){
   super(props);
   this.state = {
+    horn:0,
     datas: rawData,
     selectedBeast:{},
     show: false
@@ -39,7 +40,7 @@ modalSet = (index) => {
     <div className="App">
       <Header />
   <SelectedBeast selectedBeast={this.state.selectedBeast} show={this.state.show} handleHide={this.modalFlip}></SelectedBeast>
-      <Main modalShift={this.modalSet} cardData={this.state.datas} />
+      <Main modalShift={this.modalSet} cardData={this.state.datas} hornNum={this.state.horn} />
       <Footer />
     </div>
   )

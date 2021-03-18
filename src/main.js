@@ -35,7 +35,8 @@ class Main extends React.Component{
       
       <>
       <CardColumns>
-     { this.props.cardData.map((el, index) => (
+     { this.props.cardData.filter(card => card.horn>=this.props.hornNum)
+     .map((el, index) => (
     <div key={index}><HornedBeast key={index} url={el.image_url} name={el.title} desc={el.description} 
       alt={el.keyword} onClick={() => this.handleShow(index)} /></div>
      ))}
