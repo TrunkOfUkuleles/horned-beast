@@ -30,4 +30,10 @@ end: 4:10
 time: 40min
 
 
+lab: class 03
+
+feature #4 modal
+estimate: 1 hour
+
+
 
