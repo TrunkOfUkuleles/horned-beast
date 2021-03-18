@@ -18,6 +18,10 @@ class Main extends React.Component{
     this.modalShift = this.props.modalShift;
   }
 
+  handleShow = (idx) => {
+    this.props.modalShift(idx)
+  }
+
  
   render() {
 
@@ -32,7 +36,8 @@ class Main extends React.Component{
       <>
       <CardColumns>
      { this.props.cardData.map((el, index) => (
-    <div key={index}><HornedBeast key={index} url={el.image_url} name={el.title} desc={el.description} alt={el.keyword} clicker={this.modalShift} /></div>
+    <div key={index}><HornedBeast key={index} url={el.image_url} name={el.title} desc={el.description} 
+      alt={el.keyword} onClick={() => this.handleShow(index)} /></div>
      ))}
  </CardColumns>
  </>

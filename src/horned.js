@@ -10,12 +10,12 @@ class HornedBeast extends React.Component {
           fav: 0,
           key: this.props.key
         };
-        this.clicker = this.props.clicker;
+        this.onClick = this.props.onClick;
         
   
       }
-   handleMode = (e) => {
-        this.clicker(e)
+   handleMode = () => {
+        this.onClick(this.props.key)
       }
       
 render() {
@@ -32,8 +32,8 @@ render() {
     return (
       <div>
       <Card style={{width: '8rem'}}>
-        <Card.Body onClick={favHandler}>
-        <Card.Img src={this.props.url} onClick={this.handleMode(this.props.url)} alt={this.props.alt} />
+        <Card.Body onClick={()=> this.handleMode(this.props.key)}>
+        <Card.Img src={this.props.url} onClick={favHandler} alt={this.props.alt} />
         
         <Card.Text>♥️ {this.state.fav}</Card.Text>
         <Card.Title>{this.props.name}</Card.Title>

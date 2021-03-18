@@ -5,40 +5,40 @@ import Header from './header';
 import Footer from './footer';
 import Main from './main';
 import SelectedBeast  from './SelectedBeast ';
+import rawData from './assets/data.json'
 
 
 class App extends React.Component {
 constructor(props){
   super(props);
   this.state = {
-    modal:'',
-    shower: false
+    datas: rawData,
+    selectedBeast:{},
+    show: false
   }
-
-  this.modalClose = this.modalClose.bind(this)
 }
 
-  modalClose = function() {
-  this.setState({modal:'', shower: !this.state.shower})
+modalClose = () => {
+  this.setState({show: !this.state.shower})
   }
  
+modalSet = (index) => {
+  this.setState({selectedBeast: this.state.datas[index] , show: !this.state.show})
 
+}
 
 
 
   render() {
-    var data = require('./assets/data.json');
+    // var data = require('./assets/data.json');
 
-    let modalSet = (el) => {
-  this.setState({modal: el , shower: !this.state.shower})
-
-}
+    
 
     return (
     <div className="App">
       <Header />
-      <SelectedBeast picture={this.state.modal} show={this.state.shower} onClick={this.modalClose}></SelectedBeast>
-      <Main modalShift={modalSet} cardData={data} />
+  <SelectedBeast selectedBeast={this.state.selectedBeast} show={this.state.show} handleHide={this.modalClose} onClick={()=>this.modalSet}></SelectedBeast>
+      <Main modalShift={this.modalSet} cardData={this.state.datas} />
       <Footer />
     </div>
   )

@@ -5,6 +5,7 @@ import ModalBody from 'react-bootstrap/ModalBody'
 
 
 
+
 class SelectedBeast extends React.Component {
     
     constructor(props){
@@ -19,9 +20,10 @@ class SelectedBeast extends React.Component {
         return(
             <>
 
-        <Modal show={this.props.show} onHide={this.props.modalClose}>
+        <Modal show={this.props.show} onHide={()=>this.props.modalClose}>
+            <Modal.Header><Modal.Title>{this.props.selectedBeast.title}</Modal.Title></Modal.Header>
             <ModalBody>
-                <img src={this.props.picture} alt='modal' width='10rem' onClick={this.props.onHide}></img>
+                <img src={this.props.selectedBeast.image_url} alt='modal' width='10rem' onClick={this.onHide}></img>
             </ModalBody>
         </Modal>
 
