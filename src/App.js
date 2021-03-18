@@ -6,6 +6,7 @@ import Footer from './footer';
 import Main from './main';
 import SelectedBeast  from './SelectedBeast ';
 import rawData from './assets/data.json'
+import HornForm from './hornForm.js';
 
 
 class App extends React.Component {
@@ -29,6 +30,9 @@ modalSet = (index) => {
 
 }
 
+hornSet = (val) => {
+  this.setState({horn: val })
+}
 
 
   render() {
@@ -39,6 +43,7 @@ modalSet = (index) => {
     return (
     <div className="App">
       <Header />
+      <HornForm numHorn={this.state.horn} setter={this.hornSet} />
   <SelectedBeast selectedBeast={this.state.selectedBeast} show={this.state.show} handleHide={this.modalFlip}></SelectedBeast>
       <Main modalShift={this.modalSet} cardData={this.state.datas} hornNum={this.state.horn} />
       <Footer />
