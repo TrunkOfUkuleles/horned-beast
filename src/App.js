@@ -18,12 +18,13 @@ constructor(props){
   }
 }
 
-modalClose = () => {
-  this.setState({show: !this.state.shower})
+modalFlip= () => {
+  this.setState({show: !this.state.show})
   }
  
 modalSet = (index) => {
-  this.setState({selectedBeast: this.state.datas[index] , show: !this.state.show})
+  this.setState({selectedBeast: this.state.datas[index]})
+  this.setState({show:true})
 
 }
 
@@ -37,7 +38,7 @@ modalSet = (index) => {
     return (
     <div className="App">
       <Header />
-  <SelectedBeast selectedBeast={this.state.selectedBeast} show={this.state.show} handleHide={this.modalClose} onClick={()=>this.modalClose}></SelectedBeast>
+  <SelectedBeast selectedBeast={this.state.selectedBeast} show={this.state.show} handleHide={this.modalFlip}></SelectedBeast>
       <Main modalShift={this.modalSet} cardData={this.state.datas} />
       <Footer />
     </div>

@@ -20,12 +20,12 @@ class SelectedBeast extends React.Component {
         return(
             <>
 
-        <Modal show={this.props.show} onHide={this.props.modalClose}>
-        <Modal.Header closeButton onClick={()=>this.props.modalClose}>
+        <Modal show={this.props.show} onHide={this.props.handleHide}>
+        <Modal.Header closeButton >
             <Modal.Title>{this.props.selectedBeast.title}</Modal.Title>
             </Modal.Header>
             <ModalBody>
-                <img src={this.props.selectedBeast.image_url} alt='modal' width='10rem' onClick={this.onHide}></img>
+                <img src={this.props.selectedBeast.image_url} alt='modal' width='10rem' />
             </ModalBody>
         </Modal>
 
