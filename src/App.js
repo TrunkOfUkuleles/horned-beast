@@ -30,8 +30,8 @@ modalSet = (index) => {
 
 }
 
-hornSet = (val) => {
-  this.setState({horn: val })
+hornSet = (e) => {
+  this.setState({horn: e.value })
 }
 
 
@@ -43,7 +43,7 @@ hornSet = (val) => {
     return (
     <div className="App">
       <Header />
-      <HornForm numHorn={this.state.horn} setter={this.hornSet} />
+      <HornForm numHorn={this.state.horn} handleCha={this.hornSet} />
   <SelectedBeast selectedBeast={this.state.selectedBeast} show={this.state.show} handleHide={this.modalFlip}></SelectedBeast>
       <Main modalShift={this.modalSet} cardData={this.state.datas} hornNum={this.state.horn} />
       <Footer />
