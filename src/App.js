@@ -37,7 +37,7 @@ modalSet = (index) => {
     return (
     <div className="App">
       <Header />
-  <SelectedBeast selectedBeast={this.state.selectedBeast} show={this.state.show} handleHide={this.modalClose} onClick={()=>this.modalSet}></SelectedBeast>
+  <SelectedBeast selectedBeast={this.state.selectedBeast} show={this.state.show} handleHide={this.modalClose} onClick={()=>this.modalClose}></SelectedBeast>
       <Main modalShift={this.modalSet} cardData={this.state.datas} />
       <Footer />
     </div>
