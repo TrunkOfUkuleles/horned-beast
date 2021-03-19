@@ -13,7 +13,7 @@ class App extends React.Component {
 constructor(props){
   super(props);
   this.state = {
-    horn:1,
+    horn: 2,
     datas: rawData,
     selectedBeast:{},
     show: false
@@ -31,10 +31,9 @@ modalSet = (index) => {
 
 }
 
-hornSet = (e) => {
-  e.preventDefault()
+hornSet = (num) => {
   console.log(this.state)
-  this.setState({horn: e.target.value })
+  this.setState({horn: num })
 }
 
 
