@@ -40,3 +40,8 @@ end:1:00 am
 
 
 
+lab: class04
+feature #5 filter (sort)
+estimate: 1 hour
+start 6:00
+end: 1:30
