@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/horned-beast/static/css/main.7d180cbf.chunk.css",
-    "main.js": "/horned-beast/static/js/main.c428d081.chunk.js",
-    "main.js.map": "/horned-beast/static/js/main.c428d081.chunk.js.map",
+    "main.js": "/horned-beast/static/js/main.c0463aa8.chunk.js",
+    "main.js.map": "/horned-beast/static/js/main.c0463aa8.chunk.js.map",
     "runtime-main.js": "/horned-beast/static/js/runtime-main.907916bf.js",
     "runtime-main.js.map": "/horned-beast/static/js/runtime-main.907916bf.js.map",
     "static/css/2.150d169a.chunk.css": "/horned-beast/static/css/2.150d169a.chunk.css",
-    "static/js/2.e261ff0b.chunk.js": "/horned-beast/static/js/2.e261ff0b.chunk.js",
-    "static/js/2.e261ff0b.chunk.js.map": "/horned-beast/static/js/2.e261ff0b.chunk.js.map",
+    "static/js/2.e7dbbdf8.chunk.js": "/horned-beast/static/js/2.e7dbbdf8.chunk.js",
+    "static/js/2.e7dbbdf8.chunk.js.map": "/horned-beast/static/js/2.e7dbbdf8.chunk.js.map",
     "index.html": "/horned-beast/index.html",
     "static/css/2.150d169a.chunk.css.map": "/horned-beast/static/css/2.150d169a.chunk.css.map",
     "static/css/main.7d180cbf.chunk.css.map": "/horned-beast/static/css/main.7d180cbf.chunk.css.map",
-    "static/js/2.e261ff0b.chunk.js.LICENSE.txt": "/horned-beast/static/js/2.e261ff0b.chunk.js.LICENSE.txt"
+    "static/js/2.e7dbbdf8.chunk.js.LICENSE.txt": "/horned-beast/static/js/2.e7dbbdf8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.907916bf.js",
     "static/css/2.150d169a.chunk.css",
-    "static/js/2.e261ff0b.chunk.js",
+    "static/js/2.e7dbbdf8.chunk.js",
     "static/css/main.7d180cbf.chunk.css",
-    "static/js/main.c428d081.chunk.js"
+    "static/js/main.c0463aa8.chunk.js"
   ]
 }
