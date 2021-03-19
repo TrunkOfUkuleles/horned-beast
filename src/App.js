@@ -13,7 +13,7 @@ class App extends React.Component {
 constructor(props){
   super(props);
   this.state = {
-    horn: 2,
+    horn: 0,
     datas: rawData,
     selectedBeast:{},
     show: false
@@ -24,9 +24,9 @@ modalFlip= () => {
   this.setState({show: !this.state.show})
   }
  
-modalSet = (index) => {
-  console.log(this.state)
-  this.setState({selectedBeast: this.state.datas[index]})
+modalSet = (foc) => {
+  
+  this.setState({selectedBeast: foc})
   this.setState({show:true})
 
 }
@@ -34,6 +34,7 @@ modalSet = (index) => {
 hornSet = (num) => {
   console.log(this.state)
   this.setState({horn: num })
+  document.getElementById('main-feed').handleRefresh()
 }
 
 
@@ -47,7 +48,7 @@ hornSet = (num) => {
       <Header />
       <HornForm numHorn={this.state.horn} handleCha={this.hornSet} />
   <SelectedBeast selectedBeast={this.state.selectedBeast} show={this.state.show} handleHide={this.modalFlip}></SelectedBeast>
-      <Main modalShift={this.modalSet} cardData={this.state.datas} hornNum={this.state.horn} />
+      <Main id="main-feed" modalShift={this.modalSet} cardData={this.state.datas} hornNum={this.state.horn} />
       <Footer />
     </div>
   )
