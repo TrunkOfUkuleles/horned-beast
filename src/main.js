@@ -1,8 +1,8 @@
 
 import React from 'react';
-import HornedBeast from './horned.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CardColumns from 'react-bootstrap/CardColumns'
+
+import MainFeed from './mainFeed';
 
 
 
@@ -13,19 +13,26 @@ class Main extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
+      horns: this.props.hornNum,
+      full: this.props.cardData.slice(),
+      
      
     };
     
   }
 
-  handleShow = (urrl) => {
-    this.props.modalShift(urrl)
-    
+  
+
+  handleFeed = () => {
+    console.log(this.state)
+    this.setState({feed: this.props.cardData.slice()
+      .sort((a,b) => a.horns > b.horns)
+      .filter(card => card.horns >= this.props.hornNum)})
+
   }
 
-  handleRefresh = () => {
-    document.getElementById('main-feed').handleRefresh()
-  }
+ 
+  
  
   render() {
 
@@ -38,13 +45,9 @@ class Main extends React.Component{
     return( 
       
       <>
-      <CardColumns>               
-     { this.props.cardData.sort((a,b) => a.horns > b.horns).slice().filter(card => card.horns >= this.props.hornNum )
-     .map((el) => (
-    <HornedBeast key={el.keyword} horn={el.horns} url={el.image_url} name={el.title} desc={el.description} 
-      alt={el.keyword} whoAm={el} gettit={this.handleShow} />
-     ))}
- </CardColumns>
+                 
+        <MainFeed rend={this.handleFeed} fullData={this.state.full} hornCheck={this.props.hornNum} showing={this.props.modalShift}/>   
+
  </>
     )
     

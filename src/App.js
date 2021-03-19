@@ -32,9 +32,11 @@ modalSet = (foc) => {
 }
 
 hornSet = (num) => {
-  console.log(this.state)
+  console.log(num)
   this.setState({horn: num })
-  document.getElementById('main-feed').handleRefresh()
+  
+  // document.getElementById('main-feed').handleRefresh()
+
 }
 
 
