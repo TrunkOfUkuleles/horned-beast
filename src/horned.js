@@ -38,6 +38,7 @@ render() {
         <Card.Text>♥️ {this.state.fav}</Card.Text>
         <Card.Title>{this.props.name}</Card.Title>
         <Card.Text>{this.props.desc} </Card.Text>
+        <Card.Text>{this.props.horn}</Card.Text>
         
         </Card.Body>
       </Card>

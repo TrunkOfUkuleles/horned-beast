@@ -13,7 +13,7 @@ class App extends React.Component {
 constructor(props){
   super(props);
   this.state = {
-    horn:0,
+    horn:1,
     datas: rawData,
     selectedBeast:{},
     show: false
@@ -25,13 +25,16 @@ modalFlip= () => {
   }
  
 modalSet = (index) => {
+  console.log(this.state)
   this.setState({selectedBeast: this.state.datas[index]})
   this.setState({show:true})
 
 }
 
 hornSet = (e) => {
-  this.setState({horn: e.value })
+  e.preventDefault()
+  console.log(this.state)
+  this.setState({horn: e.target.value })
 }
 
 

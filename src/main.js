@@ -20,6 +20,7 @@ class Main extends React.Component{
 
   handleShow = (idx) => {
     this.props.modalShift(idx)
+    
   }
 
  
@@ -35,7 +36,7 @@ class Main extends React.Component{
       
       <>
       <CardColumns>
-     { this.props.cardData.filter(card => card.horns >= this.props.hornNum)
+     { this.props.cardData.filter(card => card.horns <= this.props.hornNum)
      .map((el, index) => (
     <div key={index}><HornedBeast key={index} horn={el.horns} url={el.image_url} name={el.title} desc={el.description} 
       alt={el.keyword} onClick={() => this.handleShow(index)} /></div>
