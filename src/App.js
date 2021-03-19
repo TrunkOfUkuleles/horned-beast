@@ -34,6 +34,7 @@ modalSet = (foc) => {
 hornSet = (num) => {
   console.log(this.state)
   this.setState({horn: num })
+  document.getElementById('main-feed').handleRefresh()
 }
 
 
@@ -47,7 +48,7 @@ hornSet = (num) => {
       <Header />
       <HornForm numHorn={this.state.horn} handleCha={this.hornSet} />
   <SelectedBeast selectedBeast={this.state.selectedBeast} show={this.state.show} handleHide={this.modalFlip}></SelectedBeast>
-      <Main modalShift={this.modalSet} cardData={this.state.datas} hornNum={this.state.horn} />
+      <Main id="main-feed" modalShift={this.modalSet} cardData={this.state.datas} hornNum={this.state.horn} />
       <Footer />
     </div>
   )

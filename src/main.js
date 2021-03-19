@@ -15,7 +15,7 @@ class Main extends React.Component{
     this.state = {
      
     };
-    this.modalShift = this.props.modalShift;
+    
   }
 
   handleShow = (urrl) => {
@@ -23,6 +23,9 @@ class Main extends React.Component{
     
   }
 
+  handleRefresh = () => {
+    document.getElementById('main-feed').handleRefresh()
+  }
  
   render() {
 
@@ -32,11 +35,11 @@ class Main extends React.Component{
 //  }
 
 
-    return(
+    return( 
       
       <>
-      <CardColumns>
-     { this.props.cardData.filter(card => card.horns >= this.props.hornNum)
+      <CardColumns>               
+     { this.props.cardData.sort((a,b) => a.horns > b.horns).slice().filter(card => card.horns >= this.props.hornNum )
      .map((el) => (
     <HornedBeast key={el.keyword} horn={el.horns} url={el.image_url} name={el.title} desc={el.description} 
       alt={el.keyword} whoAm={el} gettit={this.handleShow} />

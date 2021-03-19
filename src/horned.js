@@ -32,12 +32,12 @@ render() {
     return (
       <div>
       <Card style={{width: '8rem'}}>
-        <Card.Body >
+        <Card.Body onClick={favHandler}>
         <Card.Img src={this.props.url} onClick={()=> this.handleMode(this.props.whoAm)} alt={this.props.alt} />
         
-        <Card.Text onClick={favHandler}>♥️ {this.state.fav}</Card.Text>
+        <Card.Text>♥️ {this.state.fav}</Card.Text>
         <Card.Title>{this.props.name}</Card.Title> 
-        <Card.Text>{this.props.horn}</Card.Text>
+        <Card.Text>{this.state.itself.horns}</Card.Text>
         
         </Card.Body>
       </Card>
