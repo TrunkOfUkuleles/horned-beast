@@ -8,27 +8,37 @@ class HornedBeast extends React.Component {
         super(props);
         this.state = {
           fav: 0,
+          key: this.props.key
         };
+        this.onClick = this.props.onClick;
+        
+  
       }
-    
-
+   handleMode = () => {
+        this.onClick(this.props.key)
+      }
+      
 render() {
     
+  
+
       // let heart = require('./assets/heart.svg');
    const favHandler = () => {
           this.setState({fav: this.state.fav + 1})
       }
+  
         
 
     return (
       <div>
-      <Card style={{wdith: '8rem'}}>
-        <Card.Body>
+      <Card style={{width: '8rem'}}>
+        <Card.Body onClick={()=> this.handleMode(this.props.key)}>
         <Card.Img src={this.props.url} onClick={favHandler} alt={this.props.alt} />
         
         <Card.Text>♥️ {this.state.fav}</Card.Text>
         <Card.Title>{this.props.name}</Card.Title>
         <Card.Text>{this.props.desc} </Card.Text>
+        <Card.Text>{this.props.horn}</Card.Text>
         
         </Card.Body>
       </Card>
