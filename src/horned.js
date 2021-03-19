@@ -8,14 +8,14 @@ class HornedBeast extends React.Component {
         super(props);
         this.state = {
           fav: 0,
-          key: this.props.key
+          itself: this.props.whoAm
         };
-        this.onClick = this.props.onClick;
+        // this.onClick = this.props.onClick;
         
   
       }
-   handleMode = () => {
-        this.onClick(this.props.key)
+   handleMode = (me) => {
+        this.props.gettit(me)
       }
       
 render() {
@@ -32,12 +32,11 @@ render() {
     return (
       <div>
       <Card style={{width: '8rem'}}>
-        <Card.Body onClick={()=> this.handleMode(this.props.key)}>
-        <Card.Img src={this.props.url} onClick={favHandler} alt={this.props.alt} />
+        <Card.Body >
+        <Card.Img src={this.props.url} onClick={()=> this.handleMode(this.props.whoAm)} alt={this.props.alt} />
         
-        <Card.Text>♥️ {this.state.fav}</Card.Text>
-        <Card.Title>{this.props.name}</Card.Title>
-        <Card.Text>{this.props.desc} </Card.Text>
+        <Card.Text onClick={favHandler}>♥️ {this.state.fav}</Card.Text>
+        <Card.Title>{this.props.name}</Card.Title> 
         <Card.Text>{this.props.horn}</Card.Text>
         
         </Card.Body>
